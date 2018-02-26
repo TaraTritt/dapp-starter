@@ -107,6 +107,12 @@ const instance = new web3.eth.Contract(
 
 9. Modify ethereum/web3.js to use your Infura Rinkeby
 
+```javascript
+const provider = new Web3.providers.HttpProvider(
+  "<Infura Provider URL with Access Key>"
+);
+```
+
 ## Links
 
 ### Development
