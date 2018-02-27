@@ -1,6 +1,6 @@
 const HDWalletProvider = require("truffle-hdwallet-provider");
 const Web3 = require("web3");
-const compiledFactory = require("./build/<Your Contract>.json"); // get compiled bytecode and ABI (interface)
+const compiledContract = require("./build/<Your Contract>.json"); // get compiled bytecode and ABI (interface)
 
 /* Need the following arguments for the provider instantiation below:
     1. Get the mnemonic phrase you should have recieved when you started up MetaMask
@@ -20,10 +20,10 @@ const deploy = async () => {
   console.log("Attempting to deploy contract from account", accounts[0]);
 
   const result = await new web3.eth.Contract(
-    JSON.parse(compiledFactory.interface)
+    JSON.parse(compiledContract.interface)
   )
-    .deploy({ data: compiledFactory.bytecode })
-    .send({ gas: "1000000", from: accounts[0] });
+    .deploy({ data: compiledContract.bytecode })
+    .send({ gas: "5000000", from: accounts[0] });
 
   console.log("Contract deployed to", result.options.address);
 };
