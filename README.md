@@ -30,7 +30,7 @@ Navigate to and follow the directions below for the following:
   * Sign up for Infura at https://infura.io/, you should recieve an email will all the public ethereum networks - save the Rinkeby Test Provider URL for later
   * This url will allow you to connect to a node provided by Infura, which is required to interact with any Ethereum Network
 
-## Steps to Get Started If Using the Public Rinkeby Test Network
+## Steps to Get Started
 
 1. Install dependencies with yarn
 
