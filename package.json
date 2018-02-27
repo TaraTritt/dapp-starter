@@ -6,7 +6,12 @@
   "repository": "https://github.com/TaraTritt/dn-auction-dapp.git",
   "author": "TaraTritt <tmt7rc@virginia.edu>",
   "license": "MIT",
+  "scripts": {
+    "dev": "next dev"
+  },
   "dependencies": {
+    "css-loader": "^0.28.10",
+    "file-loader": "^1.1.10",
     "next": "^5.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

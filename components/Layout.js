@@ -9,7 +9,7 @@ export default props => {
   return (
     <Container>
       <Head>
-        <title>Kickstarter DApp</title>
+        <title>Sample DApp</title>
         <link
           rel="stylesheet"
           href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"

@@ -116,6 +116,14 @@ const provider = new Web3.providers.HttpProvider(
 );
 ```
 
+10. Modify the pages/index.js
+
+11. Run your app locally
+
+```shell
+yarn run dev
+```
+
 ## Links
 
 ### Development
