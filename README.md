@@ -41,7 +41,7 @@ yarn install
 2. Add your contract(s) (.sol) to the ethereum/contracts folder
 
 3. Modify ethereum/compile.js to read and compile your contract
-   * Replace the '<Your Contract>' with your contract (.sol)
+   * Replace the `<Your Contract>` with your contract (.sol)
 
 ```javascript
 const contractPath = path.resolve(
@@ -59,14 +59,14 @@ node compile.js
 ```
 
 5. Modify ethereum/deploy.js to deploy your desired contract
-   * Replace the '<Your Contract>' with the .json file name of the compiled contract from the previous step that you want to deploy
+   * Replace the `<Your Contract>` with the .json file name of the compiled contract from the previous step that you want to deploy
 
 ```javascript
 const compiledContract = require("./build/<Your Contract>.json");
 ```
 
-   * Replace the '<MetaMask Mnemonic phrase>' with the MetaMask mnemonic phrase that you saved earlier
-   * Replace the '<Infura Provider URL with Access Key>' with the Rinkeby Test Provider URL that you saved earlier
+   * Replace the `<MetaMask Mnemonic phrase>` with the MetaMask mnemonic phrase that you saved earlier
+   * Replace the `<Infura Provider URL with Access Key>` with the Rinkeby Test Provider URL that you saved earlier
 
 ```javascript
 const provider = new HDWalletProvider(
@@ -76,7 +76,7 @@ const provider = new HDWalletProvider(
 ```
 
 6. Deploy the contract to the Rinkeby Network
-   * Make sure to save the address where contract the contract is deployed. This should be logged to the console as "Contract deployed to <Contract Address>'. You can save it to the ADDRESS file under the root directory
+   * Make sure to save the address where contract the contract is deployed. This should be logged to the console as "Contract deployed to <Contract Address>`. You can save it to the ADDRESS file under the root directory
    * You can view your deployed contract using [Rinkeby - Etherscan for Rinkeby](https://rinkeby.etherscan.io/). Just paste your contract's address into the search. There should be one transaction present for the contract creation
    * If you want to deploy more than one contract, just modify deploy.js again following the instructions in the previous step and rerun the command below
 
@@ -93,13 +93,13 @@ node deploy.js
    * Then paste the address where your contract was deployed into the "At Address" input and click. You should see a panel created underneath that shows all the public functions of your contract
 
 8. Modify ethereum/contract.js to interact with your contract instance in your JavaScript code
-   * Replace '<Your Contract>' with the contract you want to get the instance of
+   * Replace `<Your Contract>` with the contract you want to get the instance of
 
 ```javascript
 import Contract from "./build/<Your Contract>.json";
 ```
 
-   * Replace the '<Address of Contract>' with the saved address from the previous deployment step
+   * Replace the `<Address of Contract>` with the saved address from the previous deployment step
 
 ```javascript
 const instance = new web3.eth.Contract(
