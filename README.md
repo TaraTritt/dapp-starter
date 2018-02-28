@@ -8,7 +8,7 @@ Interacting with any public Ethereum network requires some initial setup, please
 
 ## Documentation
 
-Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and will give you a brief overview of everything you need to get started with Ethereum DApp development. 
+Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and will give you a brief overview of everything you need to get started with Ethereum DApp development.
 If you just want to get started developing just complete the Prerequisites below and then follow the steps in Getting Started.
 
 ## Prerequisites
@@ -59,57 +59,79 @@ Navigate to and follow the directions below for the following:
 
 * [Semantic UI React](https://github.com/Semantic-Org/Semantic-UI-React) - a UI framework that provides a variety of React components for building simple but beautiful interfaces
 
-  ```javascript
-  import React from "react";
-  import { Menu } from "semantic-ui-react";
+From [components/Header.js](https://github.com/TaraTritt/dapp-starter/blob/master/components/Header.js)
 
-  export default () => {
-    return (
-      <Menu style={{ marginTop: "10px" }}>
-        <Menu.Item>Sample DApp</Menu.Item>
-        <Menu.Menu position="right" />
-      </Menu>
-    );
-  };
-  ```
+```javascript
+import React from "react";
+import { Menu } from "semantic-ui-react";
+
+export default () => {
+  return (
+    <Menu style={{ marginTop: "10px" }}>
+      <Menu.Item>Sample DApp</Menu.Item>
+      <Menu.Menu position="right" />
+    </Menu>
+  );
+};
+```
+
+* [solc](https://github.com/ethereum/solc-js) - JavaScript bindings for the Solidity compiler
+
+From [ethereum/compile.js](https://github.com/TaraTritt/dapp-starter/blob/master/ethereum/compile.js)
+
+```javascript
+const contractPath = path.resolve(
+  __dirname,
+  "contracts",
+  "<Your Contract>.sol"
+);
+const source = fs.readFileSync(contractPath, "utf-8"); // path and encoding
+const output = solc.compile(source, 1).contracts;
+```
 
 * [truffle-hdwallet-provider](https://github.com/trufflesuite/truffle-hdwallet-provider) - Wallet-enabled Web3 provider that can be used to sign transactions for addresses derived from a 12-word mnemonic.
 
-  ```javascript
-  const provider = new HDWalletProvider(
-    "<MetaMask Mnemonic phrase>", //mnemonic generates many accounts
-    "<Infura Provider URL with Access Key>" //provider url with access key
-  );
-  const web3 = new Web3(provider);
-  ```
+From [ethereum/deploy.js](https://github.com/TaraTritt/dapp-starter/blob/master/ethereum/deploy.js)
+
+```javascript
+const provider = new HDWalletProvider(
+  "<MetaMask Mnemonic phrase>", //mnemonic generates many accounts
+  "<Infura Provider URL with Access Key>" //provider url with access key
+);
+const web3 = new Web3(provider);
+```
 
 * [web3.js](https://github.com/ethereum/web3.js/) - A JavaScript API that can be used to execute transactions on a network.
 
   * This project is using the 1.0.0-beta.30 version, versions 0.xx.xx do not support promises or the async / await syntax, only callbacks were supported
 
-  ```javascript
-  static async getInitialProps() {
-    const campaigns = await contract.methods.getDeployedCampaigns().call();
-    return { campaigns };
-  }
-  ```
+From [components/Header.js](https://github.com/TaraTritt/dapp-starter/blob/master/components/Header.js)
 
-  * Metamask also automatically injects a web3 library into any page you are browsing with provider, which is used in the app when available
+```javascript
+static async getInitialProps() {
+  const campaigns = await contract.methods.getDeployedCampaigns().call();
+  return { campaigns };
+}
+```
 
-  ```javascript
-  if (typeof window !== "undefined" && window.web3 !== "undefined") {
-    // we are in the browser and metamask is running
-    // get metamask instance that injects web3 into all web pages
-    // this will not work if user does not metamask installed
-    web3 = new Web3(window.web3.currentProvider);
-  } else {
-    // we are on the server or the user is not running metamask
-    const provider = new Web3.providers.HttpProvider(
-      "<Infura Provider URL with Access Key>"
-    );
-    web3 = new Web3(provider);
-  }
-  ```
+    * Metamask also automatically injects a web3 library into any page you are browsing with provider, which is used in the app when available
+
+From [ethereum/web3.js](https://github.com/TaraTritt/dapp-starter/blob/master/ethereum/web3.js)
+
+```javascript
+if (typeof window !== "undefined" && window.web3 !== "undefined") {
+  // we are in the browser and metamask is running
+  // get metamask instance that injects web3 into all web pages
+  // this will not work if user does not metamask installed
+  web3 = new Web3(window.web3.currentProvider);
+} else {
+  // we are on the server or the user is not running metamask
+  const provider = new Web3.providers.HttpProvider(
+    "<Infura Provider URL with Access Key>"
+  );
+  web3 = new Web3(provider);
+}
+```
 
 ## Getting Started
 
