@@ -1,6 +1,6 @@
 # DApp Starter Kit
 
-Derived from Kickstart DApp at [EthereumCasts](https://github.com/StephenGrider/EthereumCasts)
+Derived from the Kickstart DApp at [EthereumCasts](https://github.com/StephenGrider/EthereumCasts)
 
 This repository is using the Public Rinkeby Test Network, if you want to just develop with a local test network, please view this [React Truffle Box](https://github.com/truffle-box/react-box/tree/master/src) provided by the [Truffle Framework](http://truffleframework.com/)
 
