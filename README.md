@@ -8,12 +8,8 @@ Interacting with any public Ethereum network requires some initial setup, please
 
 ## Documentation
 
-Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and covers the following:
-
-* [Ethereum & Blockchain Intro](https://github.com/TaraTritt/dapp-starter/wiki/Ethereum-&-Blockchain-Intro)
-* [Solidity](https://github.com/TaraTritt/dapp-starter/wiki/Solidity)
-* [Tips, Tricks, & Gotchas for DApp development](https://github.com/TaraTritt/dapp-starter/wiki/Tips,-Tricks,-&-Gotchas)
-* [List of common errors while developing DApps](https://github.com/TaraTritt/dapp-starter/wiki/Error-Index)
+Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and will give you a brief overview of everything you need to get started with Ethereum DApp development. 
+If you just want to get started developing just complete the Prerequisites below and then follow the steps in Getting Started.
 
 ## Prerequisites
 
