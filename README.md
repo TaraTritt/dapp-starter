@@ -137,7 +137,7 @@ Navigate to and follow the directions below for the following:
 
 An outline explaining the purposes of these steps can be found in the [wiki](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro)
 
-### [Compilation](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#Compilation)
+### [Compilation](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#compilation)
 
 1. Install dependencies with yarn
 
@@ -167,7 +167,7 @@ node compile.js
 
 * This will generate .json files for each contract you compiled under ethereum/build
 
-### [Deployment](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#Deployment)
+### [Deployment](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#deployment)
 
 5. Modify ethereum/deploy.js to deploy your desired contract
 
