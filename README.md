@@ -10,7 +10,7 @@ This repository is using the Public Rinkeby Test Network, if you want to just de
 
 Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and will give you a brief overview of everything you need to get started with Ethereum DApp development.
 
-If you just want to get started developing skip to the Prerequisites section below and then follow the steps in Getting Started.
+If you just want to get started developing skip to the [Prerequisites](https://github.com/TaraTritt/dapp-starter#prerequisites) section below and then follow the steps in Getting Started.
 
 ## Built With
 
