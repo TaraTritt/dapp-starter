@@ -1,3 +1,5 @@
+// this is the library import
+// however if we want to actually use web3 we need to declare an instance, see below
 import Web3 from "web3";
 
 let web3;

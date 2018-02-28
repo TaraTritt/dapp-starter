@@ -6,6 +6,8 @@ This repository is using the Public Rinkeby Test Network, if you want to just de
 
 Interacting with any public Ethereum network requires some initial setup, please be aware
 
+## Documentation
+
 ## Prerequisites
 
 Install to your computer:
@@ -29,6 +31,82 @@ Navigate to and follow the directions below for the following:
 - [Infura](https://infura.io/)
   * Sign up for Infura at https://infura.io/, you should recieve an email will all the public ethereum networks - save the Rinkeby Test Provider URL for later
   * This url will allow you to connect to a node provided by Infura, which is required to interact with any Ethereum Network
+
+## Built With
+
+* [React](https://github.com/facebook/react) - a JavaScript library to build dynamic single page applications
+
+  ```javascript
+  class Hello extends React.Component {
+    render() {
+      return <div>Hello {this.props.name}</div>;
+    }
+  }
+
+  ReactDOM.render(<Hello name="World" />, document.getElementById("container"));
+  ```
+
+  Renders:
+
+  `Hello World`
+
+* [Next.js](https://www.google.com/search?q=next+js&oq=next+js&aqs=chrome..69i57j69i60l3j69i59l2.1590j0j4&sourceid=chrome&ie=UTF-8) - a minimalist framework for server side rendered React applications
+
+  * To add another page just add another .js file under pages with a React component. It can be navigated to via localhost:3000/sample for a pages/sample.js file
+
+* [Semantic UI React](https://github.com/Semantic-Org/Semantic-UI-React) - a UI framework that provides a variety of React components for building simple but beautiful interfaces
+
+  ```javascript
+  import React from "react";
+  import { Menu } from "semantic-ui-react";
+
+  export default () => {
+    return (
+      <Menu style={{ marginTop: "10px" }}>
+        <Menu.Item>Sample DApp</Menu.Item>
+        <Menu.Menu position="right" />
+      </Menu>
+    );
+  };
+  ```
+
+* [truffle-hdwallet-provider](https://github.com/trufflesuite/truffle-hdwallet-provider) - Wallet-enabled Web3 provider that can be used to sign transactions for addresses derived from a 12-word mnemonic.
+
+  ```javascript
+  const provider = new HDWalletProvider(
+    "<MetaMask Mnemonic phrase>", //mnemonic generates many accounts
+    "<Infura Provider URL with Access Key>" //provider url with access key
+  );
+  const web3 = new Web3(provider);
+  ```
+
+* [web3.js](https://github.com/ethereum/web3.js/) - A JavaScript API that can be used to execute transactions on a network.
+
+  * This project is using the 1.0.0-beta.30 version, versions 0.xx.xx do not support promises or the async / await syntax, only callbacks were supported
+
+  ```javascript
+  static async getInitialProps() {
+    const campaigns = await contract.methods.getDeployedCampaigns().call();
+    return { campaigns };
+  }
+  ```
+
+  * Metamask also automatically injects a web3 library into any page you are browsing with provider, which is used in the app when available
+
+  ```javascript
+  if (typeof window !== "undefined" && window.web3 !== "undefined") {
+    // we are in the browser and metamask is running
+    // get metamask instance that injects web3 into all web pages
+    // this will not work if user does not metamask installed
+    web3 = new Web3(window.web3.currentProvider);
+  } else {
+    // we are on the server or the user is not running metamask
+    const provider = new Web3.providers.HttpProvider(
+      "<Infura Provider URL with Access Key>"
+    );
+    web3 = new Web3(provider);
+  }
+  ```
 
 ## Getting Started
 
@@ -87,7 +165,7 @@ node deploy.js
 7. Use can use the [Remix - Solidity Browser IDE](https://remix.ethereum.org/) to view and interact with your deployed contract on the Rinkeby Network
 
    * Go to the "Run" tab
-   * Make sure under the environment option that the Injected Web3 option is selected this will use MetaMask's injected web3 instance in your browser to interact with the Rinkeby Network
+   * Make sure under the environment option that the Injected Web3 option is selected this will use MetaMask's injected Web3 instance in your browser to interact with the Rinkeby Network
    * Make sure you have a copy of you contract pasted in the IDE and select it from the dropdown above the "Create" and "At Address" inputs
    * Then paste the address where your contract was deployed into the "At Address" input and click. You should see a panel created underneath that shows all the public functions of your contract
 
