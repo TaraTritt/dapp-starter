@@ -9,7 +9,8 @@ Interacting with any public Ethereum network requires some initial setup, please
 ## Documentation
 
 Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and will give you a brief overview of everything you need to get started with Ethereum DApp development.
-If you just want to get started developing just complete the Prerequisites below and then follow the steps in Getting Started.
+
+If you just want to get started developing skip to the Prerequisites section below and then follow the steps in Getting Started.
 
 ## Prerequisites
 
