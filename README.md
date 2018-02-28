@@ -232,10 +232,10 @@ const provider = new Web3.providers.HttpProvider(
 * Remove `getDeployedCampaigns()` and replace it with a method on your deployed contract that returns something and render it using React
 
 ```javascript
-  static async getInitialProps() {
-    const campaigns = await contract.methods.getDeployedCampaigns().call();
-    return { campaigns };
-  }
+static async getInitialProps() {
+  const campaigns = await contract.methods.getDeployedCampaigns().call();
+  return { campaigns };
+}
 ```
 
 13. Run your app locally on port 3000
