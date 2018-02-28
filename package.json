@@ -13,10 +13,12 @@
     "css-loader": "^0.28.10",
     "file-loader": "^1.1.10",
     "next": "^5.0.0",
+    "node-sass": "^4.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "semantic-ui-css": "^2.3.0",
     "semantic-ui-react": "^0.78.2",
+    "solc": "^0.4.20",
     "truffle-hdwallet-provider": "^0.0.3",
     "web3": "^1.0.0-beta.30"
   }
