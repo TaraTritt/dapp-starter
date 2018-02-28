@@ -92,7 +92,6 @@ Navigate to and follow the directions below for the following:
   ```
 
   * Metamask also automatically injects a web3 library into any page you are browsing with provider, which is used in the app when available
-
   ```javascript
   if (typeof window !== "undefined" && window.web3 !== "undefined") {
     // we are in the browser and metamask is running
@@ -111,6 +110,7 @@ Navigate to and follow the directions below for the following:
 ## Getting Started
 
 1. Install dependencies with yarn
+
 ```shell
 yarn install
 ```
@@ -118,6 +118,8 @@ yarn install
 2. Add your contract(s) (.sol) to the ethereum/contracts folder
 
 3. Modify ethereum/compile.js to read and compile your contract
+   * Replace the `<Your Contract>` with your contract (.sol)
+
 ```javascript
 const contractPath = path.resolve(
   __dirname,
@@ -125,36 +127,39 @@ const contractPath = path.resolve(
   "<Your Contract>.sol"
 );
 ```
-   * Replace the `<Your Contract>` with your contract (.sol)
 
 4. Compile the contracts by executing ethereum/compile.js
+   * This will generate .json files for each contract you compiled under ethereum/build
+
 ```shell
 node compile.js
 ```
-   * This will generate .json files for each contract you compiled under ethereum/build
 
 5. Modify ethereum/deploy.js to deploy your desired contract
+   * Replace the `<Your Contract>` with the .json file name of the compiled contract from the previous step that you want to deploy
+
 ```javascript
 const compiledContract = require("./build/<Your Contract>.json");
 ```
-   * Replace the `<Your Contract>` with the .json file name of the compiled contract from the previous step that you want to deploy
+
+  * Replace the `<MetaMask Mnemonic phrase>` with the MetaMask mnemonic phrase that you saved earlier
+  * Replace the `<Infura Provider URL with Access Key>` with the Rinkeby Test Provider URL that you saved earlier
+
 ```javascript
 const provider = new HDWalletProvider(
   "<MetaMask Mnemonic phrase>", //mnemonic generates many accounts
   "<Infura Provider URL with Access Key>" //access key
 );
 ```
-  * Replace the `<MetaMask Mnemonic phrase>` with the MetaMask mnemonic phrase that you saved earlier
-  * Replace the `<Infura Provider URL with Access Key>` with the Rinkeby Test Provider URL that you saved earlier
 
 6. Deploy the contract to the Rinkeby Network
-```shell
-node deploy.js
-```
    * Make sure to save the address where contract the contract is deployed. This should be logged to the console as "Contract deployed to `<Contract Address>`". You can save it to the ADDRESS file under the root directory
    * You can view your deployed contract using [Rinkeby - Etherscan for Rinkeby](https://rinkeby.etherscan.io/). Just paste your contract's address into the search. There should be one transaction present for the contract creation
    * If you want to deploy more than one contract, just modify deploy.js again following the instructions in the previous step and rerun the command below
 
+```shell
+node deploy.js
+```
 
 7. Use can use the [Remix - Solidity Browser IDE](https://remix.ethereum.org/) to view and interact with your deployed contract on the Rinkeby Network
 
@@ -164,17 +169,20 @@ node deploy.js
    * Then paste the address where your contract was deployed into the "At Address" input and click. You should see a panel created underneath that shows all the public functions of your contract
 
 8. Modify ethereum/contract.js to interact with your contract instance in your JavaScript code
+   * Replace `<Your Contract>` with the contract you want to get the instance of
+
 ```javascript
 import Contract from "./build/<Your Contract>.json";
 ```
-   * Replace `<Your Contract>` with the contract you want to get the instance of
+
+  * Replace the `<Address of Contract>` with the saved address from the previous deployment step
+
 ```javascript
 const instance = new web3.eth.Contract(
   JSON.parse(Contract.interface),
   "<Address of Contract>"
 );
 ```
-  * Replace the `<Address of Contract>` with the saved address from the previous deployment step
 
 9. Modify ethereum/web3.js to use your Infura Rinkeby Provider URL
 
@@ -195,6 +203,7 @@ const provider = new Web3.providers.HttpProvider(
 ```
 
 11. Run your app locally on port 3000
+
 ```shell
 yarn run dev
 ```
