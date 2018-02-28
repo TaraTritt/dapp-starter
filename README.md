@@ -167,6 +167,8 @@ node compile.js
 
 * This will generate .json files for each contract you compiled under ethereum/build
 
+### [Deployment](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#Deployment)
+
 5. Modify ethereum/deploy.js to deploy your desired contract
 
 * Replace the `<Your Contract>` with the .json file name of the compiled contract from the previous step that you want to deploy
