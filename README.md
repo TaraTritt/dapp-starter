@@ -206,19 +206,24 @@ node deploy.js
 * Make sure you have a copy of you contract pasted in the IDE and select it from the dropdown above the "Create" and "At Address" inputs
 * Then paste the address where your contract was deployed into the "At Address" input and click. You should see a panel created underneath that shows all the public functions of your contract
 
-9. Modify ethereum/contract.js to interact with your contract instance in your JavaScript code
+### [Define Web3 Provider](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#define-web3-provider)
 
-* Replace `<Your Contract>` with the contract you want to get the instance of
-
-```javascript
-import Contract from "./build/<Your Contract>.json";
-```
-10. Modify ethereum/web3.js to use your Infura Rinkeby Provider URL
+9. Modify ethereum/web3.js to use your Infura Rinkeby Provider URL
 
 ```javascript
 const provider = new Web3.providers.HttpProvider(
   "<Infura Provider URL with Access Key>"
 );
+```
+
+### [Define Web3 Contract Instance](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#define-web3-contract-instance)
+
+10. Modify ethereum/contract.js to interact with your contract instance in your JavaScript code
+
+* Replace `<Your Contract>` with the contract you want to get the instance of
+
+```javascript
+import Contract from "./build/<Your Contract>.json";
 ```
 
 11. Modify ethereum/contract.js to get your deployed contract instance via the address that was logged to the console
@@ -231,6 +236,8 @@ const instance = new web3.eth.Contract(
   "<Address of Contract>"
 );
 ```
+
+### [Call Contract via Web3](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#call-contract-via-web3)
 
 12. Modify the pages/index.js to call a method on your deployed contract
 
