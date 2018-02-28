@@ -28,7 +28,7 @@ If you just want to get started developing skip to the Prerequisites section bel
   const output = solc.compile(source, 1).contracts;
   ```
 
-* [web3.js](https://github.com/ethereum/web3.js/) - A JavaScript API that can be used to execute transactions on a network.
+* [web3.js](https://github.com/ethereum/web3.js/) - A JavaScript library that allows you to interact with a local or remote ethereum node, using a HTTP or IPC connection. This allows you to do things, like deploy your contracts, make calls to your contract, and get information on your accounts.
 
   * This project is using the 1.0.0-beta.30 version, versions 0.xx.xx do not support promises or the async / await syntax, only callbacks were supported
 
@@ -137,7 +137,7 @@ Navigate to and follow the directions below for the following:
 
 An outline explaining the purposes of these steps can be found in the [wiki](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro)
 
-### [Compilation](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#compilation)
+### [Compile Contract](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#compile-contract)
 
 1. Install dependencies with yarn
 
@@ -167,7 +167,7 @@ node compile.js
 
 * This will generate .json files for each contract you compiled under ethereum/build
 
-### [Deployment](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#deployment)
+### [Deploy Contract](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#deploy-contract)
 
 5. Modify ethereum/deploy.js to deploy your desired contract
 
@@ -206,7 +206,7 @@ node deploy.js
 * Make sure you have a copy of you contract pasted in the IDE and select it from the dropdown above the "Create" and "At Address" inputs
 * Then paste the address where your contract was deployed into the "At Address" input and click. You should see a panel created underneath that shows all the public functions of your contract
 
-### [Define Web3 Provider](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#define-web3-provider)
+### [Define Web3 Provider for App](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#define-web3-provider-for-app)
 
 9. Modify ethereum/web3.js to use your Infura Rinkeby Provider URL
 
@@ -216,7 +216,7 @@ const provider = new Web3.providers.HttpProvider(
 );
 ```
 
-### [Define Web3 Contract Instance](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#define-web3-contract-instance)
+### [Define Web3 Contract Instance for App](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#define-web3-contract-instance-for-app)
 
 10. Modify ethereum/contract.js to interact with your contract instance in your JavaScript code
 
@@ -237,7 +237,7 @@ const instance = new web3.eth.Contract(
 );
 ```
 
-### [Call Contract via Web3](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#call-contract-via-web3)
+### [Call Contract via Web3 in App](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#call-contract-via-web3-in-app)
 
 12. Modify the pages/index.js to call a method on your deployed contract
 
