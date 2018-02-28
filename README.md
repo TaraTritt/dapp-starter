@@ -135,6 +135,10 @@ Navigate to and follow the directions below for the following:
 
 ## Getting Started
 
+An outline explaining the purposes of these steps can be found in the [wiki](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro)
+
+### [Compilation](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#Compilation)
+
 1. Install dependencies with yarn
 
 ```shell
@@ -207,8 +211,15 @@ node deploy.js
 ```javascript
 import Contract from "./build/<Your Contract>.json";
 ```
+10. Modify ethereum/web3.js to use your Infura Rinkeby Provider URL
 
-10. Modify ethereum/contract.js to get your deployed contract instance via the address that was logged to the console
+```javascript
+const provider = new Web3.providers.HttpProvider(
+  "<Infura Provider URL with Access Key>"
+);
+```
+
+11. Modify ethereum/contract.js to get your deployed contract instance via the address that was logged to the console
 
 * Replace the `<Address of Contract>` with the saved address from the previous deployment step
 
@@ -216,14 +227,6 @@ import Contract from "./build/<Your Contract>.json";
 const instance = new web3.eth.Contract(
   JSON.parse(Contract.interface),
   "<Address of Contract>"
-);
-```
-
-11. Modify ethereum/web3.js to use your Infura Rinkeby Provider URL
-
-```javascript
-const provider = new Web3.providers.HttpProvider(
-  "<Infura Provider URL with Access Key>"
 );
 ```
 
