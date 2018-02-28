@@ -4,7 +4,7 @@ Derived from the Kickstart DApp at [EthereumCasts](https://github.com/StephenGri
 
 This repository is using the Public Rinkeby Test Network, if you want to just develop with a local test network, please view this [React Truffle Box](https://github.com/truffle-box/react-box/tree/master/src) provided by the [Truffle Framework](http://truffleframework.com/)
 
-Interacting with any public Ethereum network requires some initial setup, please be aware
+*Interacting with any public Ethereum network requires some initial setup, please be aware*
 
 ## Documentation
 
