@@ -37,44 +37,6 @@ Navigate to and follow the directions below for the following:
 
 ## Built With
 
-* [React](https://github.com/facebook/react) - a JavaScript library to build dynamic single page applications
-
-  ```javascript
-  class Hello extends React.Component {
-    render() {
-      return <div>Hello {this.props.name}</div>;
-    }
-  }
-
-  ReactDOM.render(<Hello name="World" />, document.getElementById("container"));
-  ```
-
-  Renders:
-
-  `Hello World`
-
-* [Next.js](https://www.google.com/search?q=next+js&oq=next+js&aqs=chrome..69i57j69i60l3j69i59l2.1590j0j4&sourceid=chrome&ie=UTF-8) - a minimalist framework for server side rendered React applications
-
-  * To add another page just add another .js file under pages with a React component. It can be navigated to via localhost:3000/sample for a pages/sample.js file
-
-* [Semantic UI React](https://github.com/Semantic-Org/Semantic-UI-React) - a UI framework that provides a variety of React components for building simple but beautiful interfaces
-
-  From [components/Header.js](https://github.com/TaraTritt/dapp-starter/blob/master/components/Header.js)
-
-  ```javascript
-  import React from "react";
-  import { Menu } from "semantic-ui-react";
-
-  export default () => {
-    return (
-      <Menu style={{ marginTop: "10px" }}>
-        <Menu.Item>Sample DApp</Menu.Item>
-        <Menu.Menu position="right" />
-      </Menu>
-    );
-  };
-```
-
 * [solc](https://github.com/ethereum/solc-js) - JavaScript bindings for the Solidity compiler
 
   From [ethereum/compile.js](https://github.com/TaraTritt/dapp-starter/blob/master/ethereum/compile.js)
@@ -87,18 +49,6 @@ Navigate to and follow the directions below for the following:
   );
   const source = fs.readFileSync(contractPath, "utf-8"); // path and encoding
   const output = solc.compile(source, 1).contracts;
-  ```
-
-* [truffle-hdwallet-provider](https://github.com/trufflesuite/truffle-hdwallet-provider) - Wallet-enabled Web3 provider that can be used to sign transactions for addresses derived from a 12-word mnemonic.
-
-  From [ethereum/deploy.js](https://github.com/TaraTritt/dapp-starter/blob/master/ethereum/deploy.js)
-
-  ```javascript
-  const provider = new HDWalletProvider(
-    "<MetaMask Mnemonic phrase>", //mnemonic generates many accounts
-    "<Infura Provider URL with Access Key>" //provider url with access key
-  );
-  const web3 = new Web3(provider);
   ```
 
 * [web3.js](https://github.com/ethereum/web3.js/) - A JavaScript API that can be used to execute transactions on a network.
@@ -132,6 +82,56 @@ Navigate to and follow the directions below for the following:
     web3 = new Web3(provider);
   }
   ```
+
+* [truffle-hdwallet-provider](https://github.com/trufflesuite/truffle-hdwallet-provider) - Wallet-enabled Web3 provider that can be used to sign transactions for addresses derived from a 12-word mnemonic.
+
+  From [ethereum/deploy.js](https://github.com/TaraTritt/dapp-starter/blob/master/ethereum/deploy.js)
+
+  ```javascript
+  const provider = new HDWalletProvider(
+    "<MetaMask Mnemonic phrase>", //mnemonic generates many accounts
+    "<Infura Provider URL with Access Key>" //provider url with access key
+  );
+  const web3 = new Web3(provider);
+  ```
+
+* [Next.js](https://www.google.com/search?q=next+js&oq=next+js&aqs=chrome..69i57j69i60l3j69i59l2.1590j0j4&sourceid=chrome&ie=UTF-8) - a minimalist framework for server side rendered React applications
+
+  * To add another page just add another .js file under pages with a React component. It can be navigated to via localhost:3000/sample for a pages/sample.js file
+
+* [React](https://github.com/facebook/react) - a JavaScript library to build dynamic single page applications
+
+  ```javascript
+  class Hello extends React.Component {
+    render() {
+      return <div>Hello {this.props.name}</div>;
+    }
+  }
+
+  ReactDOM.render(<Hello name="World" />, document.getElementById("container"));
+  ```
+
+  Renders:
+
+  `Hello World`
+
+* [Semantic UI React](https://github.com/Semantic-Org/Semantic-UI-React) - a UI framework that provides a variety of React components for building simple but beautiful interfaces
+
+  From [components/Header.js](https://github.com/TaraTritt/dapp-starter/blob/master/components/Header.js)
+
+  ```javascript
+    import React from "react";
+    import { Menu } from "semantic-ui-react";
+
+    export default () => {
+      return (
+        <Menu style={{ marginTop: "10px" }}>
+          <Menu.Item>Sample DApp</Menu.Item>
+          <Menu.Menu position="right" />
+        </Menu>
+      );
+    };
+  ```  
 
 ## Getting Started
 
