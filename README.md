@@ -144,9 +144,8 @@ const compiledContract = require("./build/<Your Contract>.json");
 ```
 
 6. Modify ethereum/deploy.js to use the accounts you generated with MetaMask & use the Infura provider you registered
-
-* Replace the `<MetaMask Mnemonic phrase>` with the MetaMask mnemonic phrase that you saved earlier
-* Replace the `<Infura Provider URL with Access Key>` with the Rinkeby Test Provider URL that you saved earlier
+   * Replace the `<MetaMask Mnemonic phrase>` with the MetaMask mnemonic phrase that you saved earlier
+   * Replace the `<Infura Provider URL with Access Key>` with the Rinkeby Test Provider URL that you saved earlier
 
 ```javascript
 const provider = new HDWalletProvider(
@@ -179,8 +178,7 @@ import Contract from "./build/<Your Contract>.json";
 ```
 
 10. Modify ethereum/contract.js to get your deployed contract instance via the address that was logged to the console
-
-* Replace the `<Address of Contract>` with the saved address from the previous deployment step
+    * Replace the `<Address of Contract>` with the saved address from the previous deployment step
 
 ```javascript
 const instance = new web3.eth.Contract(
