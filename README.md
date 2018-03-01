@@ -189,7 +189,7 @@ const provider = new HDWalletProvider(
 );
 ```
 
-7. Deploy the contract to the Rinkeby Network. **Make sure to execute this command inside the ethereum directory**
+7. Deploy the contract to the Rinkeby Network. **Make sure to execute this command inside the ethereum directory.** This may take a few minutes to finish executing. 
 
 ```shell
 node deploy.js
