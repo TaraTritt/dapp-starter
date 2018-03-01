@@ -7,7 +7,7 @@
   "author": "TaraTritt <tmt7rc@virginia.edu>",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev"
+    "start": "next dev"
   },
   "dependencies": {
     "css-loader": "^0.28.10",

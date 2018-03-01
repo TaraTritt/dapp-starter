@@ -253,7 +253,7 @@ static async getInitialProps() {
 13. Run your app locally on port 3000
 
 ```shell
-yarn run dev
+yarn start
 ```
 
 ## Links
