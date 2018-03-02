@@ -17,11 +17,11 @@ Go through the following resources for the bare minumum to get started with DApp
 5.  [DApp Development Overview](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro)
 6.  [DApp Helpful Tips](https://github.com/TaraTritt/dapp-starter/wiki/Tips,-Tricks,-&-Gotchas)
 
+You can now get started with the [Prerequisites](https://github.com/TaraTritt/dapp-starter#prerequisites) section below and then follow the steps in [Getting Started](https://github.com/TaraTritt/dapp-starter#getting-started).
+
 ## Documentation
 
 Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and will give you a brief overview of everything you need to get started with Ethereum DApp development.
-
-If you just want to get started developing skip to the [Prerequisites](https://github.com/TaraTritt/dapp-starter#prerequisites) section below and then follow the steps in [Getting Started](https://github.com/TaraTritt/dapp-starter#getting-started).
 
 ## Built With
 
@@ -132,7 +132,7 @@ Install to your browser:
 
 * [Metamask](https://chrome.google.com/webstore/search/metamask)
   * After installing, create an account and save the mnemonic phrase for later
-  * Make sure you select the Rinkeby Test Networkfrom the top left corner of the extension - by default the Main Ethereum Network will be selected
+  * Make sure you select the Rinkeby Test Network from the top left corner of the extension - by default the Main Ethereum Network will be selected
 
 Navigate to and follow the directions below for the following:
 
