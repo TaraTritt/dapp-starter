@@ -4,7 +4,18 @@ Derived from the Kickstart DApp at [EthereumCasts](https://github.com/StephenGri
 
 This repository is using the Public Rinkeby Test Network, if you want to just develop with a local test network, please view this [React Truffle Box](https://github.com/truffle-box/react-box/tree/master/src) provided by the [Truffle Framework](http://truffleframework.com/)
 
-*Interacting with any public Ethereum network requires some initial setup, please be aware*
+_Interacting with any public Ethereum network requires some initial setup, please be aware_
+
+## DApp Development Starter Course
+
+Go through the following resources for the bare minumum to get started with DApp development. This is not meant to be comprehensive by any means and should be supplemented with other resources as needed for your development needs.
+
+1.  [Interactive Blockchain Overview](https://anders.com/blockchain/)
+2.  [Ethereum](https://github.com/TaraTritt/dapp-starter/wiki/Ethereum-&-Blockchain-Intro#ethereum)
+3.  [Solidity Syntax](https://learnxinyminutes.com/docs/solidity/)
+4.  [Remix Solidity Browser IDE](https://remix.ethereum.org/)
+5.  [DApp Development Overview](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro)
+6.  [DApp Helpful Tips](https://github.com/TaraTritt/dapp-starter/wiki/Tips,-Tricks,-&-Gotchas)
 
 ## Documentation
 
@@ -97,18 +108,19 @@ If you just want to get started developing skip to the [Prerequisites](https://g
   From [components/Header.js](https://github.com/TaraTritt/dapp-starter/blob/master/components/Header.js)
 
   ```javascript
-    import React from "react";
-    import { Menu } from "semantic-ui-react";
+  import React from "react";
+  import { Menu } from "semantic-ui-react";
 
-    export default () => {
-      return (
-        <Menu style={{ marginTop: "10px" }}>
-          <Menu.Item>Sample DApp</Menu.Item>
-          <Menu.Menu position="right" />
-        </Menu>
-      );
-    };
-  ```  
+  export default () => {
+    return (
+      <Menu style={{ marginTop: "10px" }}>
+        <Menu.Item>Sample DApp</Menu.Item>
+        <Menu.Menu position="right" />
+      </Menu>
+    );
+  };
+  ```
+
 ## Prerequisites
 
 Install to your computer:
@@ -139,15 +151,15 @@ An outline explaining the purposes of these steps can be found in the [wiki](htt
 
 ### [Compile Contract](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#compile-contract)
 
-1. Install dependencies with yarn
+1.  Install dependencies with yarn
 
 ```shell
 yarn install
 ```
 
-2. Add your contract(s) (.sol) to the ethereum/contracts folder
+2.  Add your contract(s) (.sol) to the ethereum/contracts folder
 
-3. Modify ethereum/compile.js to read and compile your contract
+3.  Modify ethereum/compile.js to read and compile your contract
 
 * Replace the `<Your Contract>` with your contract (.sol)
 
@@ -159,7 +171,7 @@ const contractPath = path.resolve(
 );
 ```
 
-4. Compile the contracts by executing ethereum/compile.js
+4.  Compile the contracts by executing ethereum/compile.js
 
 ```shell
 node compile.js
@@ -169,7 +181,7 @@ node compile.js
 
 ### [Deploy Contract](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#deploy-contract)
 
-5. Modify ethereum/deploy.js to deploy your desired contract
+5.  Modify ethereum/deploy.js to deploy your desired contract
 
 * Replace the `<Your Contract>` with the .json file name of the compiled contract from the previous step that you want to deploy
 
@@ -177,7 +189,7 @@ node compile.js
 const compiledContract = require("./build/<Your Contract>.json");
 ```
 
-6. Modify ethereum/deploy.js to use the accounts you generated with MetaMask & use the Infura provider you registered
+6.  Modify ethereum/deploy.js to use the accounts you generated with MetaMask & use the Infura provider you registered
 
 * Replace the `<MetaMask Mnemonic phrase>` with the MetaMask mnemonic phrase that you saved earlier
 * Replace the `<Infura Provider URL with Access Key>` with the Rinkeby Test Provider URL that you saved earlier
@@ -189,7 +201,7 @@ const provider = new HDWalletProvider(
 );
 ```
 
-7. Deploy the contract to the Rinkeby Network
+7.  Deploy the contract to the Rinkeby Network
 
 ```shell
 node deploy.js
@@ -199,7 +211,7 @@ node deploy.js
 * You can view your deployed contract using [Rinkeby - Etherscan for Rinkeby](https://rinkeby.etherscan.io/). Just paste your contract's address into the search. There should be one transaction present for the contract creation
 * If you want to deploy more than one contract, just modify deploy.js again following the instructions in the previous step and rerun the command below
 
-8. Use can use the [Remix - Solidity Browser IDE](https://remix.ethereum.org/) to view and interact with your deployed contract on the Rinkeby Network
+8.  Use can use the [Remix - Solidity Browser IDE](https://remix.ethereum.org/) to view and interact with your deployed contract on the Rinkeby Network
 
 * Go to the "Run" tab
 * Make sure under the environment option that the Injected Web3 option is selected this will use MetaMask's injected Web3 instance in your browser to interact with the Rinkeby Network
@@ -208,7 +220,7 @@ node deploy.js
 
 ### [Define Web3 Provider for App](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#define-web3-provider-for-app)
 
-9. Modify ethereum/web3.js to use your Infura Rinkeby Provider URL
+9.  Modify ethereum/web3.js to use your Infura Rinkeby Provider URL
 
 ```javascript
 const provider = new Web3.providers.HttpProvider(
