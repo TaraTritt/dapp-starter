@@ -151,6 +151,12 @@ An outline explaining the purposes of these steps can be found in the [wiki](htt
 
 ### [Compile Contract](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#compile-contract)
 
+**On Windows computer, please execute the command below first: **
+
+```shell
+npm install --global --production windows-build-tools
+```
+
 1.  Install dependencies with yarn
 
 ```shell
