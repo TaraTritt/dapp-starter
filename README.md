@@ -8,7 +8,7 @@ _Interacting with any public Ethereum network requires some initial setup, pleas
 
 ## DApp Development Starter Course
 
-Go through the following resources for the bare minumum to get started with DApp development. This is not meant to be comprehensive by any means and should be supplemented with other resources as needed for your development needs.
+Go through the following resources for the bare minumum to get started with DApp development if you aren't already familiar. This is not meant to be comprehensive by any means and should be supplemented with other resources as needed for your development needs.
 
 1.  [Interactive Blockchain Overview](https://anders.com/blockchain/) **17:50**
 2.  [Ethereum](https://github.com/TaraTritt/dapp-starter/wiki/Ethereum-&-Blockchain-Intro#ethereum) **10:00**
