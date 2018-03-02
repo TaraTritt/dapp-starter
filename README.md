@@ -6,7 +6,7 @@ This repository is using the Public Rinkeby Test Network, if you want to just de
 
 _Interacting with any public Ethereum network requires some initial setup, please be aware_
 
-## DApp Development Starter Course
+## DApp Development Intro
 
 Go through the following resources for the bare minumum to get started with DApp development if you aren't already familiar. This is not meant to be comprehensive by any means and should be supplemented with other resources as needed for your development needs.
 
