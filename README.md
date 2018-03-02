@@ -171,7 +171,7 @@ const contractPath = path.resolve(
 );
 ```
 
-4.  Compile the contracts by executing ethereum/compile.js
+4.  Compile the contracts by executing ethereum/compile.js. **Make sure to execute this command inside the ethereum directory**
 
 ```shell
 node compile.js
@@ -201,7 +201,7 @@ const provider = new HDWalletProvider(
 );
 ```
 
-7.  Deploy the contract to the Rinkeby Network
+8.  Deploy the contract to the Rinkeby Network. **Make sure to execute this command inside the ethereum directory.** This may take a few minutes to finish executing.
 
 ```shell
 node deploy.js
@@ -262,7 +262,7 @@ static async getInitialProps() {
 }
 ```
 
-13. Run your app locally on port 3000
+13. Run your app locally on port 3000. **Make sure to execute this command from the root directory of your project**
 
 ```shell
 yarn start
