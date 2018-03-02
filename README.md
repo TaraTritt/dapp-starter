@@ -10,12 +10,12 @@ _Interacting with any public Ethereum network requires some initial setup, pleas
 
 Go through the following resources for the bare minumum to get started with DApp development. This is not meant to be comprehensive by any means and should be supplemented with other resources as needed for your development needs.
 
-1.  [Interactive Blockchain Overview](https://anders.com/blockchain/)
-2.  [Ethereum](https://github.com/TaraTritt/dapp-starter/wiki/Ethereum-&-Blockchain-Intro#ethereum)
-3.  [Solidity Syntax](https://learnxinyminutes.com/docs/solidity/)
+1.  [Interactive Blockchain Overview](https://anders.com/blockchain/) **17:50**
+2.  [Ethereum](https://github.com/TaraTritt/dapp-starter/wiki/Ethereum-&-Blockchain-Intro#ethereum) **10:00**
+3.  [Solidity By Example](http://solidity.readthedocs.io/en/latest/solidity-by-example.html) **15:00**
 4.  [Remix Solidity Browser IDE](https://remix.ethereum.org/)
-5.  [DApp Development Overview](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro)
-6.  [DApp Helpful Tips](https://github.com/TaraTritt/dapp-starter/wiki/Tips,-Tricks,-&-Gotchas)
+5.  [DApp Development Overview](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro) **10:00**
+6.  [DApp Helpful Tips](https://github.com/TaraTritt/dapp-starter/wiki/Tips,-Tricks,-&-Gotchas) **10:00**
 
 You can now get started with the [Prerequisites](https://github.com/TaraTritt/dapp-starter#prerequisites) section below and then follow the steps in [Getting Started](https://github.com/TaraTritt/dapp-starter#getting-started).
 
