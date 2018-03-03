@@ -216,7 +216,7 @@ const provider = new HDWalletProvider(
 node deploy.js
 ```
 
-* Make sure to save the address where contract the contract is deployed. This should be logged to the console as "Contract deployed to `<Contract Address>`". You can save it to the ADDRESS file under the root directory
+* Make sure to save the address where contract the contract is deployed. This should be logged to the console as "Contract deployed to `<Contract Address>`". This message is also automatically written to the [ADDRESS](https://github.com/TaraTritt/dapp-starter/blob/master/ADDRESS) file under the root directory
 * You can view your deployed contract using [Rinkeby - Etherscan for Rinkeby](https://rinkeby.etherscan.io/). Just paste your contract's address into the search. There should be one transaction present for the contract creation
 * If you want to deploy more than one contract, just modify deploy.js again following the instructions in the previous step and rerun the command below
 
