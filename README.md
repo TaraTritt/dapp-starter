@@ -126,7 +126,7 @@ Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and
 Install to your computer:
 
 * [Node.js (LTS is fine)](https://nodejs.org/en/)
-Make sure you have at least version 8.0.0 >= of Node JS. You can check your node version by running this command: 
+If you already have node installed, make sure you have at least version 8.0.0 >= of Node.js. You can check your node version by running this command: 
 ```node
 node -v
 ```
