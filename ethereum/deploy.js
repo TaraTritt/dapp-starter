@@ -1,5 +1,8 @@
+const fs = require("fs-extra");
+const path = require("path");
 const HDWalletProvider = require("truffle-hdwallet-provider");
 const Web3 = require("web3");
+
 const compiledContract = require("./build/<Your Contract>.json"); // get compiled bytecode and ABI (interface)
 
 /* Need the following arguments for the provider instantiation below:
@@ -26,6 +29,11 @@ const deploy = async () => {
     .send({ gas: "5000000", from: accounts[0] });
 
   console.log("Contract deployed to", result.options.address);
+  const pathToAddressFile = path.resolve(__dirname, "../", "ADDRESS");
+  fs.outputFileSync(
+    pathToAddressFile,
+    "Contract deployed to " + result.options.address
+  );
 };
 
 deploy();
