@@ -192,7 +192,7 @@ node compile.js
 
 5.  Modify ethereum/deploy.js to deploy your desired contract
 
-* Replace the `<Your Contract>` with the .json file name of the compiled contract from the previous step that you want to deploy
+* Replace the `<Your Contract>` with the .json file name of the compiled contract in ethereum/build from the previous step that you want to deploy
 
 ```javascript
 const compiledContract = require("./build/<Your Contract>.json");
@@ -239,9 +239,9 @@ const provider = new Web3.providers.HttpProvider(
 
 ### [Define Web3 Contract Instance for App](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#define-web3-contract-instance-for-app)
 
-10. Modify ethereum/contract.js to interact with your contract instance in your JavaScript code
+10. Modify ethereum/contract.js to interact with your contract instance in your JavaScript code 
 
-* Replace `<Your Contract>` with the contract you want to get the instance of
+* Replace `<Your Contract>` with the contract you want to get the instance of from the ethereum/build folder
 
 ```javascript
 import Contract from "./build/<Your Contract>.json";
