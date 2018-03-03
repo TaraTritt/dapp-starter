@@ -241,7 +241,7 @@ const provider = new Web3.providers.HttpProvider(
 
 10. Modify ethereum/contract.js to interact with your contract instance in your JavaScript code 
 
-* Replace `<Your Contract>` with the contract you want to get the instance of from the ethereum/build folder
+* Replace `<Your Contract>` with the contract .json file you want to get the instance of from the ethereum/build folder
 
 ```javascript
 import Contract from "./build/<Your Contract>.json";
