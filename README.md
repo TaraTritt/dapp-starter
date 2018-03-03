@@ -126,7 +126,10 @@ Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and
 Install to your computer:
 
 * [Node.js (LTS is fine)](https://nodejs.org/en/)
-* [Yarn](https://yarnpkg.com/en/docs/install)
+Make sure you have at least version 8.0.0 >= of Node JS. You can check your node version by running this command: 
+```node
+node -v
+```
 
 Install to your browser:
 
@@ -151,10 +154,16 @@ An outline explaining the purposes of these steps can be found in the [wiki](htt
 
 ### [Compile Contract](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#compile-contract)
 
-1.  Install dependencies with yarn
+**If you are on a Windows computer, please execute the command as an [administrator](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/) below first:**
 
 ```shell
-yarn install
+npm install --global --production windows-build-tools
+```
+
+1.  Install dependencies with npm
+
+```shell
+npm install
 ```
 
 2.  Add your contract(s) (.sol) to the ethereum/contracts folder
@@ -183,7 +192,7 @@ node compile.js
 
 5.  Modify ethereum/deploy.js to deploy your desired contract
 
-* Replace the `<Your Contract>` with the .json file name of the compiled contract from the previous step that you want to deploy
+* Replace the `<Your Contract>` with the .json file name of the compiled contract in ethereum/build from the previous step that you want to deploy
 
 ```javascript
 const compiledContract = require("./build/<Your Contract>.json");
@@ -230,9 +239,9 @@ const provider = new Web3.providers.HttpProvider(
 
 ### [Define Web3 Contract Instance for App](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#define-web3-contract-instance-for-app)
 
-10. Modify ethereum/contract.js to interact with your contract instance in your JavaScript code
+10. Modify ethereum/contract.js to interact with your contract instance in your JavaScript code 
 
-* Replace `<Your Contract>` with the contract you want to get the instance of
+* Replace `<Your Contract>` with the contract .json file you want to get the instance of from the ethereum/build folder
 
 ```javascript
 import Contract from "./build/<Your Contract>.json";
@@ -265,7 +274,7 @@ static async getInitialProps() {
 13. Run your app locally on port 3000. **Make sure to execute this command from the root directory of your project**
 
 ```shell
-yarn start
+npm start
 ```
 
 ## Links
