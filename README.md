@@ -126,7 +126,10 @@ Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and
 Install to your computer:
 
 * [Node.js (LTS is fine)](https://nodejs.org/en/)
-* [Yarn](https://yarnpkg.com/en/docs/install)
+Make sure you have at least version 8.0.0 >= of Node JS. You can check your node version by running this command: 
+```node
+node -v
+```
 
 Install to your browser:
 
@@ -157,10 +160,10 @@ An outline explaining the purposes of these steps can be found in the [wiki](htt
 npm install --global --production windows-build-tools
 ```
 
-1.  Install dependencies with yarn
+1.  Install dependencies with npm
 
 ```shell
-yarn install
+npm install
 ```
 
 2.  Add your contract(s) (.sol) to the ethereum/contracts folder
@@ -271,7 +274,7 @@ static async getInitialProps() {
 13. Run your app locally on port 3000. **Make sure to execute this command from the root directory of your project**
 
 ```shell
-yarn start
+npm start
 ```
 
 ## Links
