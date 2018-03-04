@@ -168,7 +168,7 @@ npm install
 
 2.  Add your contract(s) (.sol) to the ethereum/contracts folder
 
-3.  Modify ethereum/compile.js to read and compile your contract
+3.  Modify ethereum/compile.js to read and compile your contract. If you don't have a contract yet, you can use the [SampleContract.sol](https://github.com/TaraTritt/dapp-starter/tree/master/ethereum/contracts) under the ethereum/contracts folder
 
 * Replace the `<Your Contract>` with your contract (.sol)
 
