@@ -10,6 +10,7 @@
     "start": "next dev"
   },
   "dependencies": {
+    "babel-plugin-module-resolver": "^3.1.0",
     "css-loader": "^0.28.10",
     "file-loader": "^1.1.10",
     "next": "^5.0.0",

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Card, Button } from "semantic-ui-react";
 
-import Layout from "../components/Layout";
-import contract from "../ethereum/contract";
+import Layout from "components/Layout";
+import contract from "ethereum/contract";
 
 class CampaignIndex extends Component {
   // modify to make some function call to your deployed contract
