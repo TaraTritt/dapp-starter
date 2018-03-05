@@ -2,10 +2,6 @@
 
 Derived from the Kickstart DApp at [EthereumCasts](https://github.com/StephenGrider/EthereumCasts)
 
-This repository is using the Public Rinkeby Test Network, if you want to just develop with a local test network, please view this [React Truffle Box](https://github.com/truffle-box/react-box/tree/master/src) provided by the [Truffle Framework](http://truffleframework.com/)
-
-_Interacting with any public Ethereum network requires some initial setup, please be aware_
-
 ## DApp Development Tutorial
 
 If you are new to DApp develoment please use the [tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro) in the wiki to get started. 
