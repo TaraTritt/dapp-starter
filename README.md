@@ -154,7 +154,7 @@ An outline explaining the purposes of these steps can be found in the [wiki](htt
 
 ### [Compile Contract](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#compile-contract)
 
-**If you are on a Windows computer, please execute the command as an [administrator](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/) below first:**
+**If you are on a Windows computer, please execute this command as an [administrator](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/) below first:**
 
 ```shell
 npm install --global --production windows-build-tools
