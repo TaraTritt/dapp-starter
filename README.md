@@ -83,7 +83,7 @@ Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and
   const web3 = new Web3(provider);
   ```
 
-* [Next.js](https://www.google.com/search?q=next+js&oq=next+js&aqs=chrome..69i57j69i60l3j69i59l2.1590j0j4&sourceid=chrome&ie=UTF-8) - a minimalist framework for server side rendered React applications
+* [Next.js](https://github.com/zeit/next.js/) - a minimalist framework for server side rendered React applications
 
   * To add another page just add another .js file under pages with a React component. It can be navigated to via localhost:3000/sample for a pages/sample.js file
 
