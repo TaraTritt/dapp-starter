@@ -4,7 +4,7 @@ Derived from the Kickstart DApp at [EthereumCasts](https://github.com/StephenGri
 
 ## DApp Development Tutorial
 
-If you are new to DApp develoment please use this [tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Tutorial) in the wiki to get started. It contains an overview of the blockchain, Ethereum, Solidity, and DApp development. 
+If you are new to DApp develoment please use this **[tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Tutorial)** in the wiki to get started. It contains an overview of the blockchain, Ethereum, Solidity, and DApp development. 
 
 If you are already familiar with DApp development, jump to the [Prerequisites](https://github.com/TaraTritt/dapp-starter#prerequisites) section below and then follow the steps in [Getting Started](https://github.com/TaraTritt/dapp-starter#getting-started).
 
