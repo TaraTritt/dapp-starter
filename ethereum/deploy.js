@@ -27,7 +27,7 @@ const deploy = async () => {
   )
     .deploy({
       data: compiledContract.bytecode,
-      arguments: ["<Your contract arguments here>"]
+      arguments: ["<Your constructor arguments here>"]
     })
     .send({ gas: "5000000", from: accounts[0] });
 
