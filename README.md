@@ -198,6 +198,14 @@ const provider = new HDWalletProvider(
   "<Infura Provider URL with Access Key>" //access key
 );
 ```
+7.  If you have any constructor arguments for your contract, update the arguments array to your constructor's arguments, if note remove the `arguments` attribute.
+
+```javascript
+    .deploy({
+      data: compiledContract.bytecode,
+      arguments: ["<Your contract arguments here>"]
+    })
+```
 
 8.  Deploy the contract to the Rinkeby Network. **Make sure to execute this command inside the ethereum directory.** This may take a few minutes to finish executing.
 
