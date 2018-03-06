@@ -149,7 +149,7 @@ An outline explaining the purposes of these steps can be found in the [wiki](htt
 npm install --global --production windows-build-tools
 ```
 
-1.  Install dependencies with npm
+1.  Install dependencies with npm from the root directory of the project
 
 ```shell
 npm install
