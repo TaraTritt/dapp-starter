@@ -1,36 +1,38 @@
 import React, { Component } from "react";
 import { Card, Button } from "semantic-ui-react";
+import moment from "moment";
 
 import Layout from "components/Layout";
 import contract from "ethereum/contract";
 
-class CampaignIndex extends Component {
+class DAppIndex extends Component {
   // modify to make some function call to your deployed contract
   static async getInitialProps() {
-    const campaigns = await contract.methods.getDeployedCampaigns().call();
-    return { campaigns };
+    const auctionEndTime = await contract.methods.auctionEndTime().call();
+    console.log(auctionEndTime);
+    return { auctionEndTime };
   }
 
-  renderCampaigns() {
-    const campaigns = this.props.campaigns.map(address => {
-      return {
-        header: address,
-        description: <a>View Campaign</a>,
-        fluid: true
-      };
-    });
-
-    return <Card.Group items={campaigns} />;
+  renderAuctionInfo() {
+    return (
+      <Card
+        header="Auction Info"
+        description={
+          "This auction ends at " +
+          moment.unix(this.props.auctionEndTime).format("MM/DD/YYYY, h:mm:ss A")
+        }
+      />
+    );
   }
 
   render() {
     return (
       <Layout>
-        <h3>Open Campaigns</h3>
-        {this.renderCampaigns()}
+        <h3>Auction</h3>
+        {this.renderAuctionInfo()}
       </Layout>
     );
   }
 }
 
-export default CampaignIndex;
+export default DAppIndex;
