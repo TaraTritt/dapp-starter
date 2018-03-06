@@ -2,22 +2,11 @@
 
 Derived from the Kickstart DApp at [EthereumCasts](https://github.com/StephenGrider/EthereumCasts)
 
-This repository is using the Public Rinkeby Test Network, if you want to just develop with a local test network, please view this [React Truffle Box](https://github.com/truffle-box/react-box/tree/master/src) provided by the [Truffle Framework](http://truffleframework.com/)
+## DApp Development Tutorial
 
-_Interacting with any public Ethereum network requires some initial setup, please be aware_
+If you are new to DApp develoment please use this **[tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Tutorial)** in the wiki to get started. It contains an overview of the blockchain, Ethereum, Solidity, and DApp development. 
 
-## DApp Development Intro
-
-Go through the following resources for the bare minumum to get started with DApp development if you aren't already familiar. This is not meant to be comprehensive by any means and should be supplemented with other resources as needed for your development needs.
-
-1.  [Interactive Blockchain Overview](https://anders.com/blockchain/) **17:50**
-2.  [Ethereum](https://github.com/TaraTritt/dapp-starter/wiki/Ethereum-&-Blockchain-Intro#ethereum) **10:00**
-3.  [Solidity By Example](http://solidity.readthedocs.io/en/latest/solidity-by-example.html) **15:00**
-4.  [Remix Solidity Browser IDE](https://remix.ethereum.org/)
-5.  [DApp Development Overview](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro) **10:00**
-6.  [DApp Helpful Tips](https://github.com/TaraTritt/dapp-starter/wiki/Tips,-Tricks,-&-Gotchas) **10:00**
-
-You can now get started with the [Prerequisites](https://github.com/TaraTritt/dapp-starter#prerequisites) section below and then follow the steps in [Getting Started](https://github.com/TaraTritt/dapp-starter#getting-started).
+If you are already familiar with DApp development, jump to the [Prerequisites](https://github.com/TaraTritt/dapp-starter#prerequisites) section below and then follow the steps in [Getting Started](https://github.com/TaraTritt/dapp-starter#getting-started).
 
 ## Documentation
 
@@ -83,7 +72,7 @@ Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and
   const web3 = new Web3(provider);
   ```
 
-* [Next.js](https://www.google.com/search?q=next+js&oq=next+js&aqs=chrome..69i57j69i60l3j69i59l2.1590j0j4&sourceid=chrome&ie=UTF-8) - a minimalist framework for server side rendered React applications
+* [Next.js](https://github.com/zeit/next.js/) - a minimalist framework for server side rendered React applications
 
   * To add another page just add another .js file under pages with a React component. It can be navigated to via localhost:3000/sample for a pages/sample.js file
 
@@ -154,7 +143,7 @@ An outline explaining the purposes of these steps can be found in the [wiki](htt
 
 ### [Compile Contract](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#compile-contract)
 
-**If you are on a Windows computer, please execute the command as an [administrator](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/) below first:**
+**If you are on a Windows computer, please execute this command as an [administrator](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/) below first:**
 
 ```shell
 npm install --global --production windows-build-tools
@@ -208,6 +197,14 @@ const provider = new HDWalletProvider(
   "<MetaMask Mnemonic phrase>", //mnemonic generates many accounts
   "<Infura Provider URL with Access Key>" //access key
 );
+```
+7.  If you have any constructor arguments for your contract, update the arguments array to your constructor's arguments, if note remove the `arguments` attribute.
+
+```javascript
+    .deploy({
+      data: compiledContract.bytecode,
+      arguments: ["<Your contract arguments here>"]
+    })
 ```
 
 8.  Deploy the contract to the Rinkeby Network. **Make sure to execute this command inside the ethereum directory.** This may take a few minutes to finish executing.
