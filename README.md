@@ -203,7 +203,7 @@ const provider = new HDWalletProvider(
 ```javascript
     .deploy({
       data: compiledContract.bytecode,
-      arguments: ["<Your contract arguments here>"]
+      arguments: ["<Your constructor arguments here>"]
     })
 ```
 
