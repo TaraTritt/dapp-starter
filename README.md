@@ -198,7 +198,7 @@ const provider = new HDWalletProvider(
   "<Infura Provider URL with Access Key>" //access key
 );
 ```
-7.  If you have any constructor arguments for your contract, update the arguments array to your constructor's arguments, if note remove the `arguments` attribute.
+7.  If you have any constructor arguments for your contract, update the arguments array to your constructor's arguments, if not remove the `arguments` attribute.
 
 ```javascript
     .deploy({
