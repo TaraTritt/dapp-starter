@@ -145,9 +145,15 @@ An outline explaining the purposes of these steps can be found in the [wiki](htt
 
 **If you are on a Windows computer, please execute this command as an [administrator](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/) below first:**
 
+
+If you are on windows, open up your terminal as administrator and run the following command:
+
 ```shell
 npm install --global --production windows-build-tools
 ```
+
+This installs a few build tools that are required to install web3 successfully on a Windows machine. You should only have to run this one time since we are installing this module globally by running install with the `--global` flag. 
+
 
 1.  Install dependencies with npm from the root directory of the project
 
