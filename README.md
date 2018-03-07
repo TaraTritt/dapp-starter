@@ -2,6 +2,8 @@
 
 Derived from the Kickstart DApp at [EthereumCasts](https://github.com/StephenGrider/EthereumCasts)
 
+This is a simple boilerplate repo to develop DApps with instructions specifically to use the Public Ethereum Rinkeby Test Network
+
 ## DApp Development Tutorial
 
 If you are new to DApp develoment please use this **[tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Tutorial)** in the wiki to get started. It contains an overview of the blockchain, Ethereum, Solidity, and DApp development.
