@@ -278,9 +278,9 @@ static async getInitialProps() {
 npm start
 ```
 
-## Who's using this starter:
+## Examples
 
-* [Discount Note Auction DApp](https://github.com/TaraTritt/dn-auction-dapp)
+* [Discount Note Auction DApp](https://github.com/TaraTritt/dn-auction-dapp): the purpose of this DApp is to auction off discount notes and it shows you how you can extend this starter repo into a more complex DApp
 
 ## Links
 
