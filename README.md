@@ -30,12 +30,14 @@ If you are already familiar with DApp development, jump to the [Prerequisites](h
 
   * This project is using the 1.0.0-beta.30 version, versions 0.xx.xx do not support promises or the async / await syntax, only callbacks were supported
 
-  From [components/Header.js](https://github.com/TaraTritt/dapp-starter/blob/master/components/Header.js)
+ 
+  From [pages/index.js](https://github.com/TaraTritt/dapp-starter/blob/master/pages/index.js)
 
   ```javascript
   static async getInitialProps() {
-    const campaigns = await contract.methods.getDeployedCampaigns().call();
-    return { campaigns };
+    const auctionEndTime = await contract.methods.auctionEndTime().call();
+    console.log(auctionEndTime);
+    return { auctionEndTime };
   }
   ```
 
