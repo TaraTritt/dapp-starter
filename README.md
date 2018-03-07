@@ -8,10 +8,6 @@ If you are new to DApp develoment please use this **[tutorial](https://github.co
 
 If you are already familiar with DApp development, jump to the [Prerequisites](https://github.com/TaraTritt/dapp-starter#prerequisites) section below and then follow the steps in [Getting Started](https://github.com/TaraTritt/dapp-starter#getting-started).
 
-## Documentation
-
-Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and will give you a brief overview of everything you need to get started with Ethereum DApp development.
-
 ## Built With
 
 * [solc](https://github.com/ethereum/solc-js) - JavaScript bindings for the Solidity compiler
@@ -139,6 +135,8 @@ Navigate to and follow the directions below for the following:
   * This url will allow you to connect to a node provided by Infura, which is required to interact with any Ethereum Network
 
 ## Getting Started
+
+The **[tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Tutorial)** that accompanies this repo, gives more context and details on all the following steps. If you are already familiar with DApp development, just execute the steps below to configure this project.
 
 ### Compile Contract
 
