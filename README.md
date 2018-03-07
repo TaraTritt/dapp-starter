@@ -2,7 +2,7 @@
 
 Derived from the Kickstart DApp at [EthereumCasts](https://github.com/StephenGrider/EthereumCasts)
 
-This is a simple boilerplate repo to develop DApps with instructions specifically to use the Public Ethereum Rinkeby Test Network
+This is a simple boilerplate repo to develop DApps with instructions on how to use the Public Ethereum Rinkeby Test Network specifically
 
 ## DApp Development Tutorial
 
