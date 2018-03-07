@@ -278,6 +278,10 @@ static async getInitialProps() {
 npm start
 ```
 
+## Who's using this starter:
+
+* [Discount Note Auction DApp](https://github.com/TaraTritt/dn-auction-dapp)
+
 ## Links
 
 ### Development
