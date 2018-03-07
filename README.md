@@ -4,7 +4,7 @@ Derived from the Kickstart DApp at [EthereumCasts](https://github.com/StephenGri
 
 ## DApp Development Tutorial
 
-If you are new to DApp develoment please use this **[tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Tutorial)** in the wiki to get started. It contains an overview of the blockchain, Ethereum, Solidity, and DApp development. 
+If you are new to DApp develoment please use this **[tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Tutorial)** in the wiki to get started. It contains an overview of the blockchain, Ethereum, Solidity, and DApp development.
 
 If you are already familiar with DApp development, jump to the [Prerequisites](https://github.com/TaraTritt/dapp-starter#prerequisites) section below and then follow the steps in [Getting Started](https://github.com/TaraTritt/dapp-starter#getting-started).
 
@@ -46,7 +46,7 @@ Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and
   From [ethereum/web3.js](https://github.com/TaraTritt/dapp-starter/blob/master/ethereum/web3.js)
 
   ```javascript
-  if (typeof window !== "undefined" && window.web3 !== "undefined") {
+  if (typeof window !== "undefined" && typeof window.web3 !== "undefined") {
     // we are in the browser and metamask is running
     // get metamask instance that injects web3 into all web pages
     // this will not work if user does not metamask installed
@@ -115,7 +115,8 @@ Our wiki is available [here](https://github.com/TaraTritt/dapp-starter/wiki) and
 Install to your computer:
 
 * [Node.js (LTS is fine)](https://nodejs.org/en/)
-If you already have node installed, make sure you have at least version 8.0.0 >= of Node.js. You can check your node version by running this command: 
+  If you already have node installed, make sure you have at least version 8.0.0 >= of Node.js. You can check your node version by running this command:
+
 ```node
 node -v
 ```
@@ -145,15 +146,13 @@ An outline explaining the purposes of these steps can be found in the [wiki](htt
 
 **If you are on a Windows computer, please execute this command as an [administrator](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/) below first:**
 
-
 If you are on windows, open up your terminal as administrator and run the following command:
 
 ```shell
 npm install --global --production windows-build-tools
 ```
 
-This installs a few build tools that are required to install web3 successfully on a Windows machine. You should only have to run this one time since we are installing this module globally by running install with the `--global` flag. 
-
+This installs a few build tools that are required to install web3 successfully on a Windows machine. You should only have to run this one time since we are installing this module globally by running install with the `--global` flag.
 
 1.  Install dependencies with npm from the root directory of the project
 
@@ -204,6 +203,7 @@ const provider = new HDWalletProvider(
   "<Infura Provider URL with Access Key>" //access key
 );
 ```
+
 7.  If you have any constructor arguments for your contract, update the arguments array to your constructor's arguments, if not remove the `arguments` attribute.
 
 ```javascript
@@ -242,7 +242,7 @@ const provider = new Web3.providers.HttpProvider(
 
 ### [Define Web3 Contract Instance for App](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#define-web3-contract-instance-for-app)
 
-10. Modify ethereum/contract.js to interact with your contract instance in your JavaScript code 
+10. Modify ethereum/contract.js to interact with your contract instance in your JavaScript code
 
 * Replace `<Your Contract>` with the contract .json file you want to get the instance of from the ethereum/build folder
 
@@ -265,16 +265,17 @@ const instance = new web3.eth.Contract(
 
 12. Modify the pages/index.js to call a method on your deployed contract
 
-* Remove `getDeployedCampaigns()` and replace it with a method on your deployed contract that returns something and render it using React
+* Remove `auctionEndTime()` and replace it with a method on your deployed contract that returns something and render it using React
 
 ```javascript
 static async getInitialProps() {
-  const campaigns = await contract.methods.getDeployedCampaigns().call();
-  return { campaigns };
+    const auctionEndTime = await contract.methods.auctionEndTime().call();
+    console.log(auctionEndTime);
+    return { auctionEndTime };
 }
 ```
 
-13. Run your app locally on port 3000. **Make sure to execute this command from the root directory of your project**
+13. Run your app locally on port 3000 from the root directory of the project. **Make sure to execute this command from the root directory of your project**
 
 ```shell
 npm start
