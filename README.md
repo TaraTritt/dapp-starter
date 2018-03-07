@@ -140,9 +140,7 @@ Navigate to and follow the directions below for the following:
 
 ## Getting Started
 
-An outline explaining the purposes of these steps can be found in the [wiki](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro)
-
-### [Compile Contract](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#compile-contract)
+### Compile Contract
 
 **If you are on a Windows computer, please execute this command as an [administrator](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/) below first:**
 
@@ -183,7 +181,7 @@ node compile.js
 
 * This will generate .json files for each contract you compiled under ethereum/build
 
-### [Deploy Contract](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#deploy-contract)
+### Deploy Contract
 
 5.  Modify ethereum/deploy.js to deploy your desired contract
 
@@ -231,7 +229,7 @@ node deploy.js
 * Make sure you have a copy of you contract pasted in the IDE and select it from the dropdown above the "Create" and "At Address" inputs
 * Then paste the address where your contract was deployed into the "At Address" input and click. You should see a panel created underneath that shows all the public functions of your contract
 
-### [Define Web3 Provider for App](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#define-web3-provider-for-app)
+### Define Web3 Provider for App
 
 9.  Modify ethereum/web3.js to use your Infura Rinkeby Provider URL
 
@@ -241,7 +239,7 @@ const provider = new Web3.providers.HttpProvider(
 );
 ```
 
-### [Define Web3 Contract Instance for App](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#define-web3-contract-instance-for-app)
+### Define Web3 Contract Instance for App
 
 10. Modify ethereum/contract.js to interact with your contract instance in your JavaScript code
 
@@ -262,7 +260,7 @@ const instance = new web3.eth.Contract(
 );
 ```
 
-### [Call Contract via Web3 in App](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Development-Intro#call-contract-via-web3-in-app)
+### Call Contract via Web3 in App
 
 12. Modify the pages/index.js to call a method on your deployed contract
 
