@@ -149,7 +149,7 @@ npm install --global --production windows-build-tools
 ```
 This installs a few build tools that are required to install web3 successfully on a Windows machine. You should only have to run this one time since we are installing this module globally by running install with the `--global` flag.
 
-If you have issues with this install see [here](https://github.com/TaraTritt/dapp-starter/wiki/Error-Index#npm--node)
+If you have issues with this install see [here](https://github.com/TaraTritt/dapp-starter/wiki/Error-Index#web3)
 
 1.  Install dependencies with npm from the root directory of the project
 
