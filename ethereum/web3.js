@@ -4,7 +4,7 @@ import Web3 from "web3";
 
 let web3;
 
-if (typeof window !== "undefined" && window.web3 !== "undefined") {
+if (typeof window !== "undefined" && typeof window.web3 !== "undefined") {
   // we are in the browser and metamask is running
   // get metamask instance that injects web3 into all web pages
   // this will not work if user does not metamask installed
