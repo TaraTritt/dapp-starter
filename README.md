@@ -41,7 +41,7 @@ If you are already familiar with DApp development, jump to the [Prerequisites](h
   }
   ```
 
-  * Metamask also automatically injects a web3 library into any page you are browsing with provider, which is used in the app when available
+  * Metamask also automatically injects a web3 library with a provider into any page you are browsing, which is used in the app when available
 
   From [ethereum/web3.js](https://github.com/TaraTritt/dapp-starter/blob/master/ethereum/web3.js)
 
