@@ -74,8 +74,6 @@ If you are already familiar with DApp development, jump to the [Prerequisites](h
 
 * [Next.js](https://github.com/zeit/next.js/) - a minimalist framework for server side rendered React applications
 
-  * To add another page just add another .js file under pages with a React component. It can be navigated to via localhost:3000/sample for a pages/sample.js file
-
 * [React](https://github.com/facebook/react) - a JavaScript library to build dynamic single page applications
 
   ```javascript
