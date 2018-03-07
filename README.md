@@ -275,7 +275,7 @@ static async getInitialProps() {
 }
 ```
 
-13. Run your app locally on port 3000 from the root directory of the project. **Make sure to execute this command from the root directory of your project**
+13. Run your app locally on port 3000. **Make sure to execute this command from the root directory of your project**
 
 ```shell
 npm start
