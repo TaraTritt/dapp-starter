@@ -8,7 +8,7 @@ If you are here for a Hackathon, please [click here](https://github.com/TaraTrit
 
 ## DApp Development Tutorial
 
-If you are new to DApp develoment please use this **[tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Tutorial)** in the wiki to get started. It contains an overview of the blockchain, Ethereum, Solidity, and DApp development.
+If you are new to DApp develoment please use the **[tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Tutorial)** that accompanies this repo to get started. It contains an overview of the blockchain, Ethereum, Solidity, React, and DApp development.
 
 ## Built With
 
