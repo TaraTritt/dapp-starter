@@ -1,18 +1,18 @@
 # DApp Starter Kit
 
-Derived from the Kickstart DApp at [EthereumCasts](https://github.com/StephenGrider/EthereumCasts)
+Derived from the Kickstart DApp at [EthereumCasts](https://github.com/StephenGrider/EthereumCasts).
 
-This is a simple boilerplate repo to develop DApps with instructions on how to use the Public Ethereum Rinkeby Test Network specifically
+This is a simple boilerplate repo to develop DApps with instructions on how to use the Public Ethereum Rinkeby Test Network specifically.
+
+If you are here for a Hackathon, please [click here](https://github.com/TaraTritt/dapp-starter/wiki/Fannie-Mae-Blockchain-Challenge) to view the description of the Fannie Mae Blockchain Challenge.
 
 ## DApp Development Tutorial
 
 If you are new to DApp develoment please use this **[tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Tutorial)** in the wiki to get started. It contains an overview of the blockchain, Ethereum, Solidity, and DApp development.
 
-If you are already familiar with DApp development, jump to the [Prerequisites](https://github.com/TaraTritt/dapp-starter#prerequisites) section below and then follow the steps in [Getting Started](https://github.com/TaraTritt/dapp-starter#getting-started).
-
 ## Built With
 
-* [solc](https://github.com/ethereum/solc-js) - JavaScript bindings for the Solidity compiler
+* [solc](https://solidity.readthedocs.io/en/v0.4.20/) - JavaScript bindings for the Solidity compiler
 
   From [ethereum/compile.js](https://github.com/TaraTritt/dapp-starter/blob/master/ethereum/compile.js)
 
@@ -26,9 +26,9 @@ If you are already familiar with DApp development, jump to the [Prerequisites](h
   const output = solc.compile(source, 1).contracts;
   ```
 
-* [web3.js](https://github.com/ethereum/web3.js/) - A JavaScript library that allows you to interact with a local or remote ethereum node, using a HTTP or IPC connection. This allows you to do things, like deploy your contracts, make calls to your contract, and get information on your accounts.
+* [web3.js](https://web3js.readthedocs.io/en/1.0/) - A JavaScript library that allows you to interact with a local or remote ethereum node, using a HTTP or IPC connection. This allows you to do things, like deploy your contracts, make calls to your contract, and get information on your accounts.
 
-  * This project is using the 1.0.0-beta.30 version, versions 0.xx.xx do not support promises or the async / await syntax, only callbacks were supported
+  * This project is using the 1.0.0-beta.30 version, versions 0.xx.xx do not support promises or the async / await syntax, only callbacks were supported. **Please be aware that much of the documentation you find online if for versions 0.xx.xx [click here](https://web3js.readthedocs.io/en/1.0/) for the 1.0 documentation.**
 
  
   From [pages/index.js](https://github.com/TaraTritt/dapp-starter/blob/master/pages/index.js)
@@ -72,9 +72,9 @@ If you are already familiar with DApp development, jump to the [Prerequisites](h
   const web3 = new Web3(provider);
   ```
 
-* [Next.js](https://github.com/zeit/next.js/) - a minimalist framework for server side rendered React applications
+* [Next.js](https://learnnextjs.com/) - a minimalist framework for server side rendered React applications
 
-* [React](https://github.com/facebook/react) - a JavaScript library to build dynamic single page applications
+* [React](https://reactjs.org/) - a JavaScript library to build dynamic single page applications
 
   ```javascript
   class Hello extends React.Component {
@@ -90,7 +90,7 @@ If you are already familiar with DApp development, jump to the [Prerequisites](h
 
   `Hello World`
 
-* [Semantic UI React](https://github.com/Semantic-Org/Semantic-UI-React) - a UI framework that provides a variety of React components for building simple but beautiful interfaces
+* [Semantic UI React](https://react.semantic-ui.com) - a UI framework that provides a variety of React components for building simple but beautiful interfaces
 
   From [components/Header.js](https://github.com/TaraTritt/dapp-starter/blob/master/components/Header.js)
 
