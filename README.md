@@ -28,7 +28,8 @@ If you are new to DApp develoment please use the **[tutorial](https://github.com
 
 * [web3.js](https://web3js.readthedocs.io/en/1.0/) - A JavaScript library that allows you to interact with a local or remote ethereum node, using a HTTP or IPC connection. This allows you to do things, like deploy your contracts, make calls to your contract, and get information on your accounts.
 
-  * This project is using the 1.0.0-beta.30 version, versions 0.xx.xx do not support promises or the async / await syntax, only callbacks were supported. **Please be aware that much of the documentation you find online if for versions 0.xx.xx [click here](https://web3js.readthedocs.io/en/1.0/) for the 1.0 documentation.**
+  * This project is using the 1.0.0-beta.30 version, versions 0.xx.xx do not support promises or the async / await syntax, only callbacks were supported. 
+  * **Please be aware that much of the documentation you find online is for versions 0.xx.xx [click here](https://web3js.readthedocs.io/en/1.0/) for the 1.0 documentation.**
 
  
   From [pages/index.js](https://github.com/TaraTritt/dapp-starter/blob/master/pages/index.js)
