@@ -12,7 +12,7 @@ If you are new to DApp develoment please use the **[tutorial](https://github.com
 
 ## Built With
 
-* [solc](https://solidity.readthedocs.io/en/v0.4.20/) - JavaScript bindings for the Solidity compiler
+* [solc](https://github.com/ethereum/solc-js) - JavaScript bindings for the Solidity compiler
 
   From [ethereum/compile.js](https://github.com/TaraTritt/dapp-starter/blob/master/ethereum/compile.js)
 
