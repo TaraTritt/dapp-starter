@@ -144,7 +144,7 @@ The **[tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Tutorial)**
 
 **If you are on a Windows computer, please execute this command as an [administrator](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/) below first:**
 
-If you are on windows, open up your terminal as administrator and run the following command:
+If you are on **Windows** computer, open up your terminal as administrator and run the following command:
 
 ```shell
 npm install --global --production windows-build-tools
@@ -153,6 +153,8 @@ npm install --global --production windows-build-tools
 This installs a few build tools that are required to install web3 successfully on a Windows machine. You should only have to run this one time since we are installing this module globally by running install with the `--global` flag.
 
 If you have issues with this install see [here](https://github.com/TaraTritt/dapp-starter/wiki/Error-Index#web3)
+
+**If you are on a Mac or Windows, continue the rest of the following steps:**
 
 1.  Install dependencies with npm from the root directory of the project
 
