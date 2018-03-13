@@ -8,7 +8,7 @@ If you are here for a Hackathon, please [click here](https://github.com/TaraTrit
 
 ## DApp Development Tutorial
 
-If you are new to DApp develoment please use the **[tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Tutorial)** that accompanies this repo to get started. It contains an overview of the blockchain, Ethereum, Solidity, React, and DApp development.
+If you are new to DApp development, please use the **[tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Tutorial)** that accompanies this repo to get started. It contains an overview of the blockchain, Ethereum, Solidity, React, and DApp development.
 
 ## Built With
 
@@ -28,38 +28,37 @@ If you are new to DApp develoment please use the **[tutorial](https://github.com
 
 * [web3.js](https://web3js.readthedocs.io/en/1.0/) - A JavaScript library that allows you to interact with a local or remote ethereum node, using a HTTP or IPC connection. This allows you to do things, like deploy your contracts, make calls to your contract, and get information on your accounts.
 
-  * This project is using the 1.0.0-beta.30 version, versions 0.xx.xx do not support promises or the async / await syntax, only callbacks were supported. 
+  * This project is using the 1.0.0-beta.30 version, versions 0.xx.xx do not support promises or the async / await syntax, only callbacks were supported.
   * **Please be aware that much of the documentation you find online is for versions 0.xx.xx [click here](https://web3js.readthedocs.io/en/1.0/) for the 1.0 documentation.**
 
- 
-  From [pages/index.js](https://github.com/TaraTritt/dapp-starter/blob/master/pages/index.js)
+From [pages/index.js](https://github.com/TaraTritt/dapp-starter/blob/master/pages/index.js)
 
-  ```javascript
-  static async getInitialProps() {
-    const auctionEndTime = await contract.methods.auctionEndTime().call();
-    console.log(auctionEndTime);
-    return { auctionEndTime };
-  }
-  ```
+```javascript
+static async getInitialProps() {
+  const auctionEndTime = await contract.methods.auctionEndTime().call();
+  console.log(auctionEndTime);
+  return { auctionEndTime };
+}
+```
 
-  * Metamask also automatically injects a web3 library with a provider into any page you are browsing, which is used in the app when available
+* Metamask also automatically injects a web3 library with a provider into any page you are browsing, which is used in the app when available
 
-  From [ethereum/web3.js](https://github.com/TaraTritt/dapp-starter/blob/master/ethereum/web3.js)
+From [ethereum/web3.js](https://github.com/TaraTritt/dapp-starter/blob/master/ethereum/web3.js)
 
-  ```javascript
-  if (typeof window !== "undefined" && typeof window.web3 !== "undefined") {
-    // we are in the browser and metamask is running
-    // get metamask instance that injects web3 into all web pages
-    // this will not work if user does not metamask installed
-    web3 = new Web3(window.web3.currentProvider);
-  } else {
-    // we are on the server or the user is not running metamask
-    const provider = new Web3.providers.HttpProvider(
-      "<Infura Provider URL with Access Key>"
-    );
-    web3 = new Web3(provider);
-  }
-  ```
+```javascript
+if (typeof window !== "undefined" && typeof window.web3 !== "undefined") {
+  // we are in the browser and metamask is running
+  // get metamask instance that injects web3 into all web pages
+  // this will not work if user does not metamask installed
+  web3 = new Web3(window.web3.currentProvider);
+} else {
+  // we are on the server or the user is not running metamask
+  const provider = new Web3.providers.HttpProvider(
+    "<Infura Provider URL with Access Key>"
+  );
+  web3 = new Web3(provider);
+}
+```
 
 * [truffle-hdwallet-provider](https://github.com/trufflesuite/truffle-hdwallet-provider) - Wallet-enabled Web3 provider that can be used to sign transactions for addresses derived from a 12-word mnemonic.
 
@@ -114,7 +113,7 @@ If you are new to DApp develoment please use the **[tutorial](https://github.com
 Install to your computer:
 
 * [Node.js (LTS is fine)](https://nodejs.org/en/)
-  * If you already have node installed, make sure you have at least version 8.0.0 >= of Node.js. You can check your node version by running this command: 
+  * If you already have node installed, make sure you have at least version 8.0.0 >= of Node.js. You can check your node version by running this command:
 
 ```node
 node -v
@@ -134,7 +133,7 @@ Navigate to and follow the directions below for the following:
   * This faucet will give you Ether for free on the Rinkeby Test Network. This will come in handy later when deploying and interacting with your contracts
 
 - [Infura](https://infura.io/)
-  * Sign up for Infura at https://infura.io/, you should recieve an email will all the public ethereum networks - save the Rinkeby Test Provider URL for later
+  * Sign up for Infura at https://infura.io/, you should receive an email will all the public ethereum networks - save the Rinkeby Test Provider URL for later
   * This url will allow you to connect to a node provided by Infura, which is required to interact with any Ethereum Network
 
 ## Getting Started
@@ -150,6 +149,7 @@ If you are on windows, open up your terminal as administrator and run the follow
 ```shell
 npm install --global --production windows-build-tools
 ```
+
 This installs a few build tools that are required to install web3 successfully on a Windows machine. You should only have to run this one time since we are installing this module globally by running install with the `--global` flag.
 
 If you have issues with this install see [here](https://github.com/TaraTritt/dapp-starter/wiki/Error-Index#web3)
