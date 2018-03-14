@@ -144,8 +144,6 @@ The **[tutorial](https://github.com/TaraTritt/dapp-starter/wiki/DApp-Tutorial)**
 
 **If you are on a Windows computer, please execute this command as an [administrator](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/) below first:**
 
-If you are on **Windows** computer, open up your terminal as administrator and run the following command:
-
 ```shell
 npm install --global --production windows-build-tools
 ```
