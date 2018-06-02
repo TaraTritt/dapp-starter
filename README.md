@@ -17,11 +17,7 @@ If you are new to DApp development, please use the **[tutorial](https://github.c
   From [ethereum/compile.js](https://github.com/TaraTritt/dapp-starter/blob/master/ethereum/compile.js)
 
   ```javascript
-  const contractPath = path.resolve(
-    __dirname,
-    "contracts",
-    "<Your Contract>.sol"
-  );
+  const contractPath = path.resolve(__dirname, "contracts", "<Your Contract>.sol");
   const source = fs.readFileSync(contractPath, "utf-8"); // path and encoding
   const output = solc.compile(source, 1).contracts;
   ```
@@ -53,9 +49,7 @@ if (typeof window !== "undefined" && typeof window.web3 !== "undefined") {
   web3 = new Web3(window.web3.currentProvider);
 } else {
   // we are on the server or the user is not running metamask
-  const provider = new Web3.providers.HttpProvider(
-    "<Infura Provider URL with Access Key>"
-  );
+  const provider = new Web3.providers.HttpProvider("<Infura Provider URL with Access Key>");
   web3 = new Web3(provider);
 }
 ```
@@ -160,6 +154,8 @@ If you have issues with this install see [here](https://github.com/TaraTritt/dap
 npm install
 ```
 
+* If you have issues running npm install follow the instructions [here](https://github.com/TaraTritt/dapp-starter/wiki/Error-Index#node)
+
 2.  Add your contract(s) (.sol) to the ethereum/contracts folder
 
 3.  Modify ethereum/compile.js to read and compile your contract. If you don't have a contract yet, you can use the [SampleContract.sol](https://github.com/TaraTritt/dapp-starter/tree/master/ethereum/contracts) under the ethereum/contracts folder
@@ -167,11 +163,7 @@ npm install
 * Replace the `<Your Contract>` with your contract (.sol)
 
 ```javascript
-const contractPath = path.resolve(
-  __dirname,
-  "contracts",
-  "<Your Contract>.sol"
-);
+const contractPath = path.resolve(__dirname, "contracts", "<Your Contract>.sol");
 ```
 
 4.  Compile the contracts by executing ethereum/compile.js. **Make sure to execute this command inside the ethereum directory**
@@ -235,9 +227,7 @@ node deploy.js
 9.  Modify ethereum/web3.js to use your Infura Rinkeby Provider URL
 
 ```javascript
-const provider = new Web3.providers.HttpProvider(
-  "<Infura Provider URL with Access Key>"
-);
+const provider = new Web3.providers.HttpProvider("<Infura Provider URL with Access Key>");
 ```
 
 ### Define Web3 Contract Instance for App
@@ -255,10 +245,7 @@ import Contract from "./build/<Your Contract>.json";
 * Replace the `<Address of Contract>` with the saved address from the previous deployment step
 
 ```javascript
-const instance = new web3.eth.Contract(
-  JSON.parse(Contract.interface),
-  "<Address of Contract>"
-);
+const instance = new web3.eth.Contract(JSON.parse(Contract.interface), "<Address of Contract>");
 ```
 
 ### Call Contract via Web3 in App
